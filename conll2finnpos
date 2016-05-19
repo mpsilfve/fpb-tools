@@ -1,0 +1,10 @@
+#! /bin/bash
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+grep -v "^# sentence" | 
+grep -v "# doc" |
+grep -v "# hash" |
+cut -f2,3,4,6 |
+sed 's/^\([^	]*\)	\([^	]*\)	\([^	]*\)	\([^	]*\)$/\1	DUMMY_FEAT	\2	Pos=\3|\4	_/' |
+$DIR/fix_lemmas.py
