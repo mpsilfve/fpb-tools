@@ -1,4 +1,4 @@
-all:parsebank.fp fpb-lemmatize.data
+all:parsebank.fp fpb-lemmatize.data fpb-lemmatize.train fpb-lemmatize.model fpb-lemmatize.test.sys
 
 fpb-lemmatize.data:parsebank.fp
 	python3 separate_non_omorfi_words.py $^ omorfi.hfst
@@ -18,5 +18,8 @@ fpb-lemmatize.train:fpb-lemmatize.data
 %.fp.in:%.fp
 	cat $^ | ./unlemmatize > $@
 
-%.test.sys:%.test %.lemmatizer
-	cat $< | ./unlemmatize | finnpos-lemmatize $*.lemmatizer > $@
+%.test.sys:%.test %.model
+	cat $< | ./unlemmatize | finnpos-lemmatize $*.model > $@
+
+%.eval:%.test.sys %.test %.model
+	finnpos-eval $*.test.sys $*.test $*.model
