@@ -14,7 +14,9 @@ When `parsebank.conllu` is in place,
 
 `make all` 
 
-should build the FinnPos lemmatization model `fpb-lemmatize.model` (Using a 5000K `parsebank.conllu` file and a 1.90 GHz processor, the build took a bit over an hour). 
+should build the FinnPos lemmatization model `fpb-lemmatize.model` (Using a 5000K `parsebank.conllu` file and a 1.90 GHz processor, the build took a bit over an hour). If you only want to make the data sets, then run
+
+`make data`
 
 Check the file `fpb-lemmatize.test.in` to see the input format for `finnpos-lemmatize`. To lemmatize a file `foo.in` you can
 
