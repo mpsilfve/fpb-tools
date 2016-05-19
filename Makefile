@@ -1,4 +1,5 @@
-all:parsebank.fp fpb-lemmatize.data fpb-lemmatize.train fpb-lemmatize.model fpb-lemmatize.test.sys
+all:parsebank.fp fpb-lemmatize.data fpb-lemmatize.train \
+fpb-lemmatize.model fpb-lemmatize.test.sys
 
 fpb-lemmatize.data:parsebank.fp
 	python3 separate_non_omorfi_words.py $^ omorfi.hfst
