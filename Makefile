@@ -13,7 +13,7 @@ fpb-lemmatize.train:fpb-lemmatize.data
 	cat $^ | ./conll2finnpos > $@
 
 %.model:%.config %.train %.dev
-	finnpos-train $^ $@
+	time finnpos-train $^ $@
 
 %.fp.in:%.fp
 	cat $^ | ./unlemmatize > $@
