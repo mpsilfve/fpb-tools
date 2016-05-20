@@ -8,9 +8,12 @@ clean:
 	rm -f parsebank.fp fpb-lemmatize.data fpb-lemmatize.train \
 fpb-lemmatize.model fpb-lemmatize.test.in fpb-lemmatize.test.sys
 
-fpb-lemmatize.data:parsebank.fp
-	python3 separate_non_omorfi_words.py $^ omorfi.hfst
-	cp $^.omor $@
+models/omorfi.hfst:models/omorfi.hfst.gz
+	gunzip -c $^ > $@
+
+fpb-lemmatize.data:parsebank.fp models/omorfi.hfst
+	python3 separate_non_omorfi_words.py $^ 
+	cp $<.omor $@
 
 fpb-lemmatize.train:fpb-lemmatize.data
 	tail -n +200000 $^ > fpb-lemmatize.train
