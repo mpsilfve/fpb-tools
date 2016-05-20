@@ -6,7 +6,6 @@ Training a lemmatizer
 1. Install FinnPos, 
 2. clone this repository, 
 3. place a suitable amount (e.g 5000K first lines) of Finnish Parsebank data in a file `parsebank.conllu` directly under the main directory `fpb-tools` and
-4. copy the OMorFi open-source morphological analyzer in the same directory under the name `omorfi.hfst`. 
 
 The file `parsebank.conllu` should contain > 200K lines. The first 100K line in `parsebank.conllu` will be used for testing, the next 100K lines for development and the remaining lines for training. 
 
