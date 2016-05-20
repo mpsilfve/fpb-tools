@@ -50,10 +50,9 @@ Using a 5000K `parsebank.conllu` file, the result of the evaluation was
     Label accuracy for all words: 1
     Label accuracy for IV words:  1
     Label accuracy for OOV words: 1
-    Lemma accuracy for all words: 0.978282
-    Lemma accuracy for IV words:  0.996975
-    Lemma accuracy for OOV words: 0.740412
-
+    Lemma accuracy for all words: 0.978966
+    Lemma accuracy for IV words:  0.993677
+    Lemma accuracy for OOV words: 0.785943
 
 The label accuracy is meaningless in this case because the model only performs lemmatization. The lemmatization accuracy for words that were seen during training (IV words) is basically 100% because there's nearly a 1-to-1 mapping from labeled word forms to lemmas in the training material. For OOV words, that is word forms not seen during training, the lemmatization accuracy is substantially less, around 74%.
 
