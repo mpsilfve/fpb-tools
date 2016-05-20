@@ -31,7 +31,8 @@ fpb-lemmatize.test:fpb-lemmatize.data
 	cat $^ | ./unlemmatize > $@
 
 %.test.sys:%.test.in %.model
-	cat $< | finnpos-lemmatize $*.model > $@
+	cat $< | finnpos-lemmatize $*.model |\
+	python3 capitalize_lemma.py > $@
 
 %.eval:%.test.sys %.test %.model
 	finnpos-eval $*.test.sys $*.test $*.model
