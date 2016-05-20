@@ -13,7 +13,7 @@ When `parsebank.conllu` is in place,
 
 `make all` 
 
-should build the FinnPos lemmatization model `fpb-lemmatize.model` (Using a 5000K `parsebank.conllu` file and a 1.90 GHz processor, the build took a bit over an hour). If you only want to make the data sets, then run
+should build the FinnPos lemmatization model `fpb-lemmatize.model` (Using a 5000K `parsebank.conllu` file and a 1.90 GHz processor, the build took a bit over an hour and required approximately 6GB of RAM). If you only want to make the data sets, then run
 
 `make data`
 
@@ -55,4 +55,4 @@ The label accuracy is meaningless in this case because the model only performs l
 
 It should be noted that `fpb-lemmatize.test` only contains words from Finnish Parsebank which are known to OMorFi. Results on words not known to OMorFi may differ so lemmatization accuracy might be worse than 74%.
 
-Lemmatization speed using a 1.90 GHz processor was around 35K tokens/second. Additionally, model loading took 4.92 seconds (with a 180MB lemmatization model). Memory requirement for training was approx. 6GB.
+Lemmatization speed using a 1.90 GHz processor was around 35K tokens/second. Additionally, model loading took 4.92 seconds (with a 180MB lemmatization model).
