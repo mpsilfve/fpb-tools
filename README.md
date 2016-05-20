@@ -55,4 +55,4 @@ The label accuracy is meaningless in this case because the model only performs l
 
 It should be noted that `fpb-lemmatize.test` only contains words from Finnish Parsebank which are known to OMorFi. Results on words not known to OMorFi may differ so lemmatization accuracy might be worse than 74%.
 
-Lemmatization speed using a 1.90 GHz processor was around 35K tokens/second. Additionally, model loading took 4.92 seconds (with a 180MB lemmatization model).
+Lemmatization speed using a 1.90 GHz processor was around 35K tokens/second. Additionally, model loading took 4.92 seconds (with a 180MB lemmatization model). Memory requirement for training was approx. 6GB.
