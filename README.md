@@ -3,7 +3,7 @@
 Training a lemmatizer
 ---------------------
 
-1. Install [FinnPos](https://github.com/mpsilfve/FinnPos), 
+1. Install [FinnPos](https://github.com/mpsilfve/FinnPos) and [hfst](https://github.com/hfst/hfst), 
 2. clone this repository and 
 3. place a suitable amount (e.g 5000K first lines) of Finnish Parsebank data in a file `parsebank.conllu` directly under the main directory `fpb-tools`.
 
