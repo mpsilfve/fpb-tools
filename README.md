@@ -51,7 +51,7 @@ Using a 5000K `parsebank.conllu` file, the result of the evaluation was
     Lemma accuracy for OOV words: 0.740412
 
 
-The label accuracy is meaningless in this case because the model only performs lemmatization. The lemmatization accuracy for words that were seen during training (IV words) is basically 100% because there nearly a 1-to-1 mapping from labeled word forms to lemmas in the training material. For OOV words, that is word forms not seen during training, the lemmatization accuracy is substantially less, around 74%.
+The label accuracy is meaningless in this case because the model only performs lemmatization. The lemmatization accuracy for words that were seen during training (IV words) is basically 100% because there's nearly a 1-to-1 mapping from labeled word forms to lemmas in the training material. For OOV words, that is word forms not seen during training, the lemmatization accuracy is substantially less, around 74%.
 
 It should be noted that `fpb-lemmatize.test` only contains words from Finnish Parsebank which are known to OMorFi. Results on words not known to OMorFi may differ so lemmatization accuracy might be worse than 74%.
 
