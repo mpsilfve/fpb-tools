@@ -20,7 +20,7 @@ should build the FinnPos lemmatization model `fpb-lemmatize.model` (Using a 5000
 
 Check the file `fpb-lemmatize.test.in` to see the input format for `finnpos-lemmatize`. To lemmatize a file `foo.in` you can
 
-`cat foo.in | finnpos-lemmatize fpb-lemmatize.model > foo.sys`
+`cat foo.in | finnpos-lemmatize fpb-lemmatize.model | python3 capitalize_lemma.py > foo.sys`
 
 Caveats
 -------
